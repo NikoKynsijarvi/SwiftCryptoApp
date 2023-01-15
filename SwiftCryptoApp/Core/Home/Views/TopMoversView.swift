@@ -14,13 +14,13 @@ struct TopMoversView: View {
                 .font(.headline)
             
             ScrollView(.horizontal){
-                HStack{
+                HStack(spacing: 16){
                     ForEach(0 ..< 5, id: \.self){_ in
                         TopMoversItemView()
                     }
                 }
             }
-        }
+        }.padding()
     }
 }
 
