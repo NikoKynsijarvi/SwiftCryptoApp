@@ -9,12 +9,23 @@ import SwiftUI
 
 struct AllCoinsView: View {
     @StateObject var viewModel: HomeViewModel
+    @State private var searchInput: String = ""
+    
     var body: some View {
        
         VStack(alignment: .leading){
-            Text("All Coins")
-                .font(.headline)
-                .padding()
+            HStack{
+                Text("All Coins")
+                    .font(.headline)
+                    .padding()
+                
+                Spacer()
+                TextField(
+                    "Search",
+                    text: $searchInput
+                )
+            }
+            
             HStack{
                 Text("Coin")
                 Spacer()
